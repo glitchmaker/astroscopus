@@ -34,6 +34,9 @@ int main(int argc, char** argv) {
     int day = 0;
     printf ("Date in format YYYY/M/D:");
     scanf ("%d/%d/%d",&year,&month,&day);
+    if (month==1 || month==2){
+        year-=1;
+    }
     printf("%f\n",convert(year,month,day));
     return (EXIT_SUCCESS);
 }
